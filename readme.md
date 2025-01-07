@@ -1,4 +1,3 @@
-
 # Ch33nchan-Torch 🚀
 
 ## Project Overview
@@ -49,12 +48,12 @@ Matrix multiplication is the **core operation** of many machine learning algorit
 
 #### Mathematical Definition:
 
-Given two matrices \( A \) and \( B \):
-\(
+Given two matrices $A$ and $B$:
+$$
 C_{ij} = \sum_{k=1}^n A_{ik} \cdot B_{kj}
-\)
+$$
 
-- **Dimensions**: If \( A \) is \( m 	imes n \) and \( B \) is \( n 	imes p \), then \( C \) will be \( m 	imes p \).
+- **Dimensions**: If $A$ is $m \times n$ and $B$ is $n \times p$, then $C$ will be $m \times p$.
 
 #### Code Example: Matrix Multiplication
 
@@ -76,16 +75,16 @@ for (size_t i = 0; i < A_rows; ++i) {
 
 Input matrices:
 
-\(
-A = egin{bmatrix} 1 & 2 \ 3 & 4 \end{bmatrix}, \quad
-B = egin{bmatrix} 5 & 6 \ 7 & 8 \end{bmatrix}
-\)
+$$
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad
+B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}
+$$
 
 Output:
 
-\(
-C = A \cdot B = egin{bmatrix} 19 & 22 \ 43 & 50 \end{bmatrix}
-\)
+$$
+C = A \cdot B = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
+$$
 
 ---
 
@@ -95,21 +94,21 @@ Autograd is the mechanism for computing **gradients** automatically. This is cru
 
 #### Gradient Computation
 
-If \( y = f(x) \), the gradient \( rac{\partial y}{\partial x} \) is computed using the **chain rule**:
+If $y = f(x)$, the gradient $\frac{\partial y}{\partial x}$ is computed using the **chain rule**:
 
-\(
-rac{\partial L}{\partial x} = rac{\partial L}{\partial y} \cdot rac{\partial y}{\partial x}
-\)
+$$
+\frac{\partial L}{\partial x} = \frac{\partial L}{\partial y} \cdot \frac{\partial y}{\partial x}
+$$
 
 #### Backward Pass
 
 Gradients are propagated backward through the computation graph.
 
 Example:
-For \( z = x \cdot y \), where \( x = 2, y = 3 \):
-\(
-rac{\partial z}{\partial x} = y, \quad rac{\partial z}{\partial y} = x
-\)
+For $z = x \cdot y$, where $x = 2, y = 3$:
+$$
+\frac{\partial z}{\partial x} = y, \quad \frac{\partial z}{\partial y} = x
+$$
 
 Code Snippet:
 
@@ -124,9 +123,9 @@ float grad_y = x;  // Partial derivative w.r.t y
 
 The **Mean Squared Error (MSE)** loss is defined as:
 
-\(
-	ext{MSE} = rac{1}{n} \sum_{i=1}^n (y_{	ext{pred}}^{(i)} - y_{	ext{true}}^{(i)})^2
-\)
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n (y_{\text{pred}}^{(i)} - y_{\text{true}}^{(i)})^2
+$$
 
 This is implemented in `loss_func.cpp`.
 
@@ -153,19 +152,19 @@ The neural network is implemented as a feedforward network with one hidden layer
 3. Apply an activation function (ReLU).
 
 Mathematical Representation:
-\(
-y = 	ext{ReLU}(X \cdot W + b)
-\)
+$$
+y = \text{ReLU}(X \cdot W + b)
+$$
 
 #### Backpropagation
 
 Gradients are calculated using the chain rule. The weights and biases are updated using gradient descent:
 
-\(
-W_{	ext{new}} = W_{	ext{old}} - \eta \cdot rac{\partial L}{\partial W}
-\)
+$$
+W_{\text{new}} = W_{\text{old}} - \eta \cdot \frac{\partial L}{\partial W}
+$$
 
-where \( \eta \) is the learning rate.
+where $\eta$ is the learning rate.
 
 Code Example:
 
@@ -215,10 +214,10 @@ ch33nchan-torch/
 
 ## Future Work
 
-- Expand tensor operations (e.g., convolution, pooling).
-- Implement more advanced loss functions.
-- Add support for recurrent neural networks.
-- Optimize tensor memory management.
+- Expand tensor operations (e.g., convolution, pooling)
+- Implement more advanced loss functions
+- Add support for recurrent neural networks
+- Optimize tensor memory management
 
 ---
 
