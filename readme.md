@@ -1,4 +1,4 @@
-# torchplusplus 🚀
+# torchplusplus 🐣🐣
 
 ## Project Overview
 
@@ -247,6 +247,15 @@ ch33nchan-torch/
 - Implement batch normalization
 - Add dropout layers
 - Optimize tensor operations
+
+## To-Do List
+
+[🐤] **Implement Backpropagation and Gradient Calculation**: Enable neural networks to adjust weights by computing gradients using backpropagation.
+- [ ] **Extend Tensor Operations**: Add element-wise operations, transpose, and broadcasting for efficient tensor manipulation.
+- [ ] **Implement Optimizers**: Start with Gradient Descent (GD) and extend to advanced optimizers like Adam and RMSprop.
+- [ ] **Build Layer Classes**: Implement Fully Connected Layers and later Convolutional Layers to form the structure of neural networks.
+- [ ] **Create Model Class**: Develop a neural network model class that stacks multiple layers, applies activations, and calculates losses.
+- [ ] **Support Batch Processing**: Modify operations to process and compute gradients for mini-batches, improving training efficiency.
 
 ## Contributing
 
